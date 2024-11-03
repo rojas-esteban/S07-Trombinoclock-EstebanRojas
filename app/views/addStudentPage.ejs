@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Consultez le trombinoscope des promotions et des étudiants de l'école sur Trombinoclock. Retrouvez des informations sur les différentes promotions ainsi que sur les étudiants qui les composent." />
+
+  <title>Trombinoclock</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+  <!-- Entête de page -->
+  <header>
+    <a class="header-logo" href="./index.html">
+      <img src="../images/trombinoclock.webp" alt="Logo de l'école Trombinoclock" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Accueil</a></li>
+
+        <li><a href="./promos.html">Promotions</a></li>
+
+        <li><a href="./ajouter-etudiant.html">Ajouter étudiant</a></li>
+
+        <li><a href="./login.html">Se connecter</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <h1>Ajouter un étudiant</h1>
+
+    <form>
+      <label for="first_name">Prénom</label><input type="text" name="first_name" id="first_name" />
+      <label for="last_name">Nom</label><input type="text" name="last_name" id="last_name" />
+      <label for="github_username">Pseudo github</label><input type="text" name="github_username"
+        id="github_username" />
+      <label for="profile_picture_url">Image de profil</label><input type="text" name="profile_picture_url"
+        id="profile_picture_url" />
+      <label for="promotion">Promotion</label>
+      <select name="promotion" id="promotion">
+
+        <% for (const cada of promos) { %>
+        <option value="1">
+          <%= cada.name %>          
+        </option>
+        <% } %>
+      </select>
+      <button type="submit">Envoyer</button>
+    </form>
+  </main>
+  
+
+  <!-- Pied de page -->
+  <footer>
+    <span>Trombinoclock ® 2024 - Tous droits réservés</span>
+  </footer>
+</body>
+
+<!-- Script pour charger dynamiquement les polices Google Fonts -->
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+    document.head.appendChild(link);
+  });
+</script>
+
+</html>

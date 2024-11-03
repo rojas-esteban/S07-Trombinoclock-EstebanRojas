@@ -1,0 +1,15 @@
+<%- include('partials/head') %>
+  <body>
+    <!-- Entête de page -->
+    <%- include('partials/header') %>
+
+    <!-- Corps de la page -->
+    <main class="promotions">
+      <div class="grid">
+        <% for (const promo of promos) { %>
+            <a class="grid__elt" href="/promotions/<%= promo.id %>"><%= promo.name.toUpperCase() %></a>
+        <% } %>
+      </div>
+    </main>
+
+   <%- include('partials/footer') %>

@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+  <body>
+    <!-- Entête de page -->
+    <%- include('partials/header') %>
+
+    <!-- Corps de la page -->
+    <main class="promotion">
+      <div class="promotion__left">
+        <h1><%= promo.name %></h1>
+      </div>
+      <div class="promotion__right">
+        <ul>
+          <li>Organisation GH : <a href="<%= promo.github_organization %>"><%= promo.github_organization %></a></li>
+          <li>
+            <a href="/promotions/<%= promo.id %>/etudiants">Voir la liste des étudiants</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Pied de page -->
+    <%- include('partials/footer') %>

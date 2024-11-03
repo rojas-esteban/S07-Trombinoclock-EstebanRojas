@@ -1,0 +1,29 @@
+<%- include('partials/head') %>
+  <body>
+    <!-- Entête de page -->
+    <%- include('partials/header') %>
+
+    <!-- Corps de la page -->
+    <main class="students">
+      <div class="grid">
+
+        <% for (const student of promoStudents) { %>
+            <!-- Carte d'un seul étudiant -->
+            <div class="student-card">
+              <img
+                src="https://i.pravatar.cc/300"
+                alt="Image de profil"
+                class="student-card__img" />
+              <div class="student-card__info">
+                <p><%= student.last_name.toUpperCase()%> <%= student.first_name %></p>
+                <p><%= student.github_username %></p>
+                <p># <%= student.id %></p>
+              </div>
+            </div>        
+        <% } %>
+
+      </div>
+    </main>
+
+    <!-- Pied de page -->
+<%- include('partials/footer') %>

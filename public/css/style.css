@@ -1,0 +1,223 @@
+:root {
+  /** COLOR VARIABLES */
+  --primary-clr-bsc: #025498;
+  --primary-clr-lgt: #008ffe;
+  --neutral-clr-lgt: #ffffff;
+
+  /** FONT FAMILIES */
+  --headings-family-font: "Bebas Neue", sans-serif;
+  --text-family-font: "Montserrat", sans-serif;
+}
+
+/** GLOBAL RULES */
+
+* {
+  font-family: var(--text-family-font);
+}
+
+a,
+a:visited {
+  color: var(--primary-clr-bsc);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-clr-lgt);
+}
+
+a:focus {
+  outline: 2px dashed var(--primary-clr-lgt); /* Focus visible */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-family-font);
+}
+
+/** BODY RULES */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/** HEADER RULES */
+header {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header-logo img {
+  width: 6rem;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+nav li:hover {
+  background-color: var(--primary-clr-bsc);
+}
+
+nav a {
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  font-family: var(--headings-family-font);
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: var(--neutral-clr-lgt);
+}
+/** FOOTER RULES */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+/** MAIN RULES */
+
+main {
+  min-height: calc(100vh - 12rem);
+}
+
+.homepage {
+  background: url(../images/homepage.webp) center / cover no-repeat;
+}
+
+/** PROMOTIONS PAGE */
+
+main .grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+main .grid__elt {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 4rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+/** PROMOTION PRESENTATION PAGE */
+
+.promotion {
+  display: flex;
+}
+
+.promotion > * {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion__left {
+  color: var(--primary-clr-bsc);
+}
+
+.promotion__left h1 {
+  font-size: 64px;
+}
+
+.promotion__right ul {
+  list-style-type: none;
+}
+
+.promotion__right li {
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+/** STUDENTS PAGE */
+
+.student-card {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 18rem;
+  height: 6rem;
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.student-card img {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+.student-card__info p:first-child {
+  font-weight: 800;
+}
+
+/** FORMS PAGE (ADD STUDENT & LOGIN) */
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+form label {
+  margin-top: 1rem;
+  font-family: var(--headings-family-font);
+  color: var(--primary-clr-bsc);
+  font-size: 20px;
+}
+
+form select,
+#login {
+  margin-bottom: 2rem;
+}
+
+form select,
+form input,
+form button {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  border: solid 2px var(--primary-clr-bsc);
+  padding: 0.25rem;
+}
+
+form button {
+  background-color: var(--primary-clr-bsc);
+  color: var(--neutral-clr-lgt);
+  font-family: var(--headings-family-font);
+  font-size: 24px;
+}
